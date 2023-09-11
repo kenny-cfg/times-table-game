@@ -14,5 +14,6 @@ function getRandomInteger() {
 }
 
 submitButton.onclick = () => {
-  console.log('SUBMITTED')
+  const proposedAnswer = inputBox.value
+  console.log('SUBMITTED', proposedAnswer)
 }
