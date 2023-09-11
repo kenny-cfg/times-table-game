@@ -2,6 +2,7 @@ const firstNumberContainer = document.getElementById('firstNumber')
 const secondNumberContainer = document.getElementById('secondNumber')
 const submitButton = document.getElementById('submitAnswer')
 const inputBox = document.getElementById('answerBox')
+const answerResponseHolder = document.getElementById('answerResponse')
 
 const firstRandomInteger = getRandomInteger()
 const secondRandomInteger = getRandomInteger()
@@ -18,8 +19,8 @@ submitButton.onclick = () => {
   const proposedAnswerAsInteger = parseInt(proposedAnswer)
   // TODO: Deal with NaN
   if (proposedAnswerAsInteger === firstRandomInteger * secondRandomInteger) {
-    console.log('Correct')
+    answerResponseHolder.innerText = `Yes, ${firstRandomInteger} x ${secondRandomInteger} is indeed ${proposedAnswerAsInteger}`
   } else {
-    console.log('Nah')
+    answerResponseHolder.innerText = `No, ${firstRandomInteger} x ${secondRandomInteger} is not ${proposedAnswerAsInteger}, it's ${firstRandomInteger * secondRandomInteger}`
   }
 }
