@@ -15,5 +15,11 @@ function getRandomInteger() {
 
 submitButton.onclick = () => {
   const proposedAnswer = inputBox.value
-  console.log('SUBMITTED', proposedAnswer)
+  const proposedAnswerAsInteger = parseInt(proposedAnswer)
+  // TODO: Deal with NaN
+  if (proposedAnswerAsInteger === firstRandomInteger * secondRandomInteger) {
+    console.log('Correct')
+  } else {
+    console.log('Nah')
+  }
 }
