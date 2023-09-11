@@ -15,6 +15,11 @@ refreshQuestion()
 
 setInterval(() => {
   countdown--
+  if (countdown <= 0) {
+    answerResponseHolder.innerText = 'OUT OF TIME'
+    incorrectAnswers++
+    refreshQuestion()
+  }
   refreshCountdownDisplay()
 }, 1000)
 
